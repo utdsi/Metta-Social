@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #searchInput {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 250px;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+
+        #searchResults {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 3%;
+            justify-items: center;
+            text-align: center;
+            gap: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        #loader_div {
+            display: none;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <div class="search-container">
+        <label for="searchInput">Search:</label>
+        <input type="text" id="searchInput" placeholder="Type to search">
+
+
+
+
+        <div id="loader_div">
+            <img src="https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.webp?cid=ecf05e47lpj8r1buophqwcr3nyqrsfw1r8gneu0cxmdfx6if&rid=giphy.webp&ct=g"
+                alt="">
+        </div>
+
+        <div id="searchResults"></div>
+
+    </div>
+
+
+
+</body>
+
+</html>
+<script src="index.js"></script>

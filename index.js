@@ -31,6 +31,8 @@ async function searchCountry() {
 
 
         if (data.status == 404) {
+            let country_div = document.getElementById("searchResults")
+            country_div.innerHTML = null
             let loader_div = document.getElementById("loader_div")
             loader_div.style.display = "none"
             window.alert("No Country has been found")

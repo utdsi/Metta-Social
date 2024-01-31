@@ -48,34 +48,47 @@
             margin-top: 50px;
         }
 
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        #searchResults div{
+
+            border: 1px solid red;
+            padding: 20px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+        @media  (max-width:1200px) {
+            
+            #searchResults {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+           
         }
+        }
+
+        @media  (max-width:720px) {
+            
+            #searchResults {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+           
+        }
+        }
+        @media  (max-width:480px) {
+            
+            #searchResults {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+           
+        }
+        }
+
+
+
+        
     </style>
 
 </head>
 
 <body>
-    <nav>
-        <div>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
+    
 
     <div class="search-container">
         <label for="searchInput">Search:</label>

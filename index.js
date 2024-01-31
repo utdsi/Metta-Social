@@ -63,9 +63,16 @@ function appendCountry(data) {
         let h3 = document.createElement("h3")
         h3.innerText = `Name:- ${el.name.common}`
         let p = document.createElement("p")
+        let hr = document.createElement("br")
         p.innerText = `Capital:- ${el.capital[0]}`
 
-        div.append(img, h3, p)
+        div.append(img,hr, h3, p)
+
+        div.addEventListener("click", function () {
+            window.location.href = "./country.html"
+
+            localStorage.setItem("capital",el.capital[0])
+        });
 
         country_div.append(div)
 

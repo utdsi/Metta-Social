@@ -68,11 +68,7 @@ function appendCountry(data) {
 
         div.append(img,hr, h3, p)
 
-        div.addEventListener("click", function () {
-            window.location.href = "./country.html"
-
-            localStorage.setItem("capital",el.capital[0])
-        });
+        
 
         country_div.append(div)
 
